@@ -15,7 +15,7 @@ import (
 	"github.com/go-openapi/validate"
 )
 
-// PreheatInfo return detailed information of a preheat task in supernode. An image preheat task may contain multiple downloading
+// PreheatInfo returns detailed information of a preheat task in supernode. An image preheat task may contain multiple downloading
 // task because that an image may have more than one layer.
 //
 // swagger:model PreheatInfo

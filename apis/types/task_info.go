@@ -44,14 +44,14 @@ type TaskInfo struct {
 	HTTPFileLength int64 `json:"httpFileLength,omitempty"`
 
 	// special attribute of remote source file. This field is used with taskURL to generate new taskID to
-	// identify different downloading task of remote source file. For example, if user A and user B uses
+	// identify different downloading task of remote source file. For example, if user A and user B use
 	// the same taskURL and taskID to download file, A and B will share the same peer network to distribute files.
 	// If user A additionally adds an identifier with taskURL, while user B still carries only taskURL, then A's
 	// generated taskID is different from B, and the result is that two users use different peer networks.
 	//
 	Identifier string `json:"identifier,omitempty"`
 
-	// md5 checksum for the resource to distribute. dfget catches this parameter from dfget's CLI
+	// md5 checksum for the resource to distribute. Dfget catches this parameter from dfget's CLI
 	// and passes it to supernode. When supernode finishes downloading file/image from the source location,
 	// it will validate the source file with this md5 value to check whether this is a valid file.
 	//
